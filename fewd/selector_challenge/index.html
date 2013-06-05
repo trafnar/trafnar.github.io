@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+<head>
+  <title>Selector Challenge</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <style type="text/css">
+
+
+  </style>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+
+    <h1>Duh duh duh duh duh Selector Challenge!</h1>
+
+
+
+
+    <div class="problem">
+
+      <div class="instructions">
+        Select anything with the class &lsquo;foo&rsquo;
+      </div>
+
+      <div class="answer_area">
+        <input data-answer=".foo" type="text" class="answer_input" placeholder="Your Answer" />
+        <div class="tabs">
+          <div class="tab active" data-which="rendered">Page</div>
+          <div class="tab" data-which="source">Code</div>
+        </div>
+      </div>
+
+      <div class="code">
+
+        <div class="foo">Remember.</div>
+        <div class="bar">Anything can have a class.</div>
+        <p class="foo">Not just div tags.</p>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="problem">
+
+      <div class="instructions">
+        Select anything with the class &lsquo;foo&rsquo; and all paragraphs inside of headers
+      </div>
+
+      <div class="answer_area">
+        <input data-answer=".foo, header" type="text" class="answer_input" placeholder="Your Answer" />
+        <div class="tabs">
+          <div class="tab active" data-which="rendered">Page</div>
+          <div class="tab" data-which="source">Code</div>
+        </div>
+      </div>
+
+      <div class="code">
+
+        <p>Outside</p>
+        <header>
+          <p>Inside</p>
+        </header>
+        <div class="foo">Foo</div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="problem">
+
+      <div class="instructions">
+        Select links inside of paragraphs inside of divs
+      </div>
+
+      <div class="answer_area">
+        <input data-answer="div p a" type="text" class="answer_input" placeholder="Your Answer" />
+        <div class="tabs">
+          <div class="tab active" data-which="rendered">Page</div>
+          <div class="tab" data-which="source">Code</div>
+        </div>
+      </div>
+
+      <div class="code">
+
+        <div><a href="#">One</a></div>
+        <div class="garbly">Two</div>
+        <a href="#">Three</a>
+        <div><p>Four<a href="#">!</a></p></div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="problem">
+
+      <div class="instructions">
+        Select links that are being hovered on. (Highlight doesn&rsquo;t appear)
+      </div>
+
+      <div class="answer_area">
+        <input data-answer="a:hover" type="text" class="answer_input" placeholder="Your Answer" />
+        <div class="tabs">
+          <div class="tab active" data-which="rendered">Page</div>
+          <div class="tab" data-which="source">Code</div>
+        </div>
+      </div>
+
+      <div class="code">
+
+        <div><a href="#">One</a></div>
+        <div class="garbly">Two</div>
+        <a href="#">Three</a>
+        <div><p>Four<a href="#">!</a></p></div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="problem">
+
+      <div class="instructions">
+        Select divs that are direct descendants of sections.
+      </div>
+
+      <div class="answer_area">
+        <input data-answer="section > div" type="text" class="answer_input" placeholder="Your Answer" />
+        <div class="tabs">
+          <div class="tab active" data-which="rendered">Page</div>
+          <div class="tab" data-which="source">Code</div>
+        </div>
+      </div>
+
+      <div class="code">
+
+        <section>
+          Selectors
+          <div>Are rad</div>
+        </section>
+
+        <section>
+          <span>
+            <div>Don't believe me?</div>
+          </span>
+        </section>
+
+        <section>
+          <p>Then I'm not talking to you anymore!</p>
+          <div>Just Kidding.</div>
+        </section>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="problem">
+
+      <div class="instructions">
+        Select only the first paragraph inside of each section.
+      </div>
+
+      <div class="answer_area">
+        <input data-answer="section p:first-child" type="text" class="answer_input" placeholder="Your Answer" />
+        <div class="tabs">
+          <div class="tab active" data-which="rendered">Page</div>
+          <div class="tab" data-which="source">Code</div>
+        </div>
+      </div>
+
+      <div class="code">
+
+        <section>
+          <p>Web development</p>
+          <p>Is fun</p>
+        </section>
+
+        <section>
+          <h1>Don't you agree?</h1>
+          <p>If not, keep going.</p>
+          <p>It just gets more fun.</p>
+        </section>
+
+        <section>
+          <p>Last Section</p>
+        </section>
+
+        <section>
+          <p>Ok fine.</p>
+          <div>One more.</div>
+        </section>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="problem">
+
+      <div class="instructions">
+        Select links with the class &lsquo;radical&rsquo;.
+      </div>
+
+      <div class="answer_area">
+        <input data-answer="a.radical" type="text" class="answer_input" placeholder="Your Answer" />
+        <div class="tabs">
+          <div class="tab active" data-which="rendered">Page</div>
+          <div class="tab" data-which="source">Code</div>
+        </div>
+      </div>
+
+      <div class="code">
+
+        <p>I like <a href="#">links</a>.</p>
+        <p class="radical">Links are <a href="#">great</a>.</p>
+        <p>You might even say <a class="radical" href="#">Radical</a>.</p>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="problem">
+
+      <div class="instructions">
+        Select Everything!
+      </div>
+
+      <div class="answer_area">
+        <input data-answer="*" type="text" class="answer_input" placeholder="Your Answer" />
+        <div class="tabs">
+          <div class="tab active" data-which="rendered">Page</div>
+          <div class="tab" data-which="source">Code</div>
+        </div>
+      </div>
+
+      <div class="code">
+        <h1>My Favorite Sports</h1>
+        <ul>
+          <li>Juggling</li>
+          <li>High Jump</li>
+          <li>Web Development</li>
+        </ul>
+        <p>Other sports include <a href="https://www.google.com/search?q=curling&tbm=isch&tbo=u&source=univ&sa=X&ei=262vUb2JCeTXigKS94CwAw&ved=0CGgQsAQ&biw=1118&bih=1234">curling</a>.</p>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+</body>
+</html>

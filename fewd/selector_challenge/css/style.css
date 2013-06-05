@@ -1,0 +1,140 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body{
+  font-family: helvetica, arial, sans-serif;
+  background-color: #eee;
+  color: #605f5f;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container > h1{
+  margin-bottom: 50px;
+}
+
+ul{
+  list-style-type: none;
+  margin-top: 10px;
+}
+ul li{
+  margin-top: 5px;
+}
+ul li:before{
+  padding-right: 5px;
+  content: "\2022";
+
+}
+p{
+  margin-top: 15px;
+}
+
+.selected{
+  background-color: yellow;
+  opacity: 0.8;
+  box-shadow: 0 0 2px 2px yellow;
+}
+
+.container{
+  width: 850px;
+  margin: 50px auto;
+}
+
+.problem{
+  border: 1px solid #9fa8b2;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  background-color: #fff;
+  margin-bottom: 100px;
+}
+
+
+.problem .instructions{
+  padding: 20px;
+  background-color: #d8dde3;
+  position: relative;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+  padding-left: 45px;
+}
+
+.problem .instructions:before{
+  content: "\2713";
+  background-color: #3cbc19;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: block;
+  text-align: center;
+  line-height: 22px;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2), inset 0 0 2px rgba(0,0,0,0.1);
+  opacity: 0.0;
+  /*-webkit-transition: all 250ms linear;*/
+}
+
+.problem.correct .instructions:before{
+  opacity: 1;
+}
+
+
+.problem .answer_area{
+  background-color: #9fa8b2;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.problem .answer_area .answer_input{
+  float: left;
+  padding: 7px;
+  width: 250px;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.5);
+  box-shadow: 0 1px 0px rgba(255, 255, 255, 0.3);
+}
+
+.problem .answer_area .tabs{
+  float: right;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.problem .answer_area .tabs .tab{
+  width: 50%;
+  float: left;
+  text-align: center;
+  padding: 7px;
+  color: #2563b8;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.problem .answer_area .tabs .tab.active{
+  background-color: #eee;
+}
+
+.problem .code{
+  overflow: hidden;
+}
+
+.problem .code .rendered{
+  height: 100%;
+  float: left;
+  width: 50%;
+  border-right: 1px solid #9fa8b2;
+  min-height: 100px;
+  padding: 20px;
+}
+
+.problem .code .source{
+  float: right;
+  width: 50%;
+  height: 100%;
+}
