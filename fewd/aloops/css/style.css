@@ -17,12 +17,15 @@ body{
 }
 
 
-.petal{
-  width: 200px;
-  height: 20px;
-  background-color: rgba(0, 100, 0, 0.5);
+.flower{
+  position: absolute;
+}
+
+.flower .petal{
+  -webkit-transform-origin: top center;
   border-radius: 50%;
   position: absolute;
-  top: 50px;
-  left: 400px;
+  left: 50%;
+  width: 20px;
+  height: 100px;
 }
