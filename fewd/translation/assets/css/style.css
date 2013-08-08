@@ -1,0 +1,16 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  padding: 20px; }
+
+.flags {
+  margin-bottom: 20px; }
+
+.flag {
+  font-size: 12px;
+  cursor: pointer;
+  border: 1px solid lightblue;
+  padding: 10px; }

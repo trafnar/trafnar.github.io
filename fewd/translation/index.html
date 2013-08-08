@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled</title>
+    
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+    <link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='assets/css/style.css'>
+  </head>
+
+  <body>
+
+
+
+<div class="flags">
+  <span class="flag">english</span>
+  <span class="flag" data-lang="cn">chinese</span>
+  <span class="flag" data-lang="es">spanish</span>
+</div>
+
+<h1 data-translate_key="page_title">Hello World</h1>
+<p data-translate_key="intro_paragrah">This is a test of my translation thing.</p>
+<p data-translate_key="fake">This one doesn't have a translation</p>
+
+    <script src='assets/js/vendor/cookie.js'></script>
+<script src='assets/js/vendor/jquery.js'></script>
+<script src='assets/js/translations.js'></script>
+<script src='assets/js/localize.js'></script>
+<script src='assets/js/app.js'></script>
+  </body>
+</html>
